@@ -1,0 +1,19 @@
+<mat-toolbar color="primary" class="mat-elevation-z3">
+	<nav>
+    <span class="title">Роутинг</span>
+    <a routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" mat-button routerLink="main">Домашняя</a>
+    <a routerLinkActive="active" routerLink="/children" mat-button [matMenuTriggerFor]="menu">Дочерняя навигация</a>
+      <mat-menu #menu="matMenu">
+        <button  mat-menu-item routerLink="/children/audio">audio</button>
+        <button  mat-menu-item routerLink="/children/video">video</button>
+      </mat-menu>
+    <a routerLinkActive="active" mat-button routerLink="/guards">guards</a>
+    <a routerLinkActive="active" mat-button routerLink="/lazy">Lazy load</a>
+    <a routerLinkActive="active" mat-button routerLink="/preload">preload</a>
+	</nav>
+</mat-toolbar>
+<div class="app-content">
+  <router-outlet></router-outlet>
+</div>
+<br>
+<div>Текущий url = {{current}}</div>
