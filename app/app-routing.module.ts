@@ -50,4 +50,4 @@ const routes: Routes = [
   declarations: [MainComponent, HelloComponent],
   providers: [HelloResolver, HelloGuard, ExitHelloGuard],
 })
-export class AppRoutingModule {}
+// export class AppRoutingModule {}
